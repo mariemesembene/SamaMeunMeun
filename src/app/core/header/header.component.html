@@ -1,0 +1,125 @@
+<section class="ftco-section">
+    <!-- <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Website menu #06</h2>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="wrap">
+        <div class="container">
+            <div class="row justify-content-between">
+                    <div class="col">
+                        <p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">+00 1234 567</a></p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <div class="social-media">
+                        <p class="mb-0 d-flex">
+                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                        </p>
+                </div>
+                    </div>
+            </div>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-white ftco_navbar bg-white ftco-navbar-light  fixed-top" id="ftco-navbar">
+    <div class="container test">
+        <a class="navbar-brand logo" href="index.html">
+            SamaMeunMeun
+            <!-- Papermag <span>Magazine</span> -->
+            <!-- <img src="../../../assets/images/logo-light.png" class="src-logo"  alt=""> -->
+        </a>
+        <!-- <p>Test</p> -->
+        <div class="widget searchform order-sm-start order-lg-last mt-2">
+            <form role="search" method="get">
+                <div class="input-group mb-3 border rounded">
+                    <input type="text" id="s" name="s" class="form-control border-0" placeholder="Rechercher...">
+                    <button type="submit" class="input-group-text bg-transparent border-0" id="searchsubmit"><i class="uil uil-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="order-lg-last icon-notification">
+        <i class="fa fa-bell position-relative primary">
+            <!-- <button type="button" class="btn btn-primary position-relative"> -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                  9
+                  <span class="visually-hidden">Notifications</span>
+                </span>
+              <!-- </button> -->
+        </i>
+        </div>
+        
+        <div class="order-lg-last" style="position: relative;">
+            <div class="d-flex align-items-center profil-section" (click)="showProfilDetails()" (clickOutside)="closeProfilPanel()">
+                <!--begin::Pic-->
+                <div class="flex-shrink-0">
+                    <div class="rounded img-profil" style="z-index: 1;">
+                        <img src="../../../assets/images/client/05.jpg" class="avatar avatar-large rounded-circle shadow d-block mx-auto w-100 h-100" alt="">
+                    </div>
+                    <div class="symbol symbol-lg-75 symbol-circle symbol-primary d-none">
+                        <span class="font-size-h3 font-weight-boldest">JM</span>
+                    </div>
+                </div>
+                <!--end::Pic-->
+                <!--begin::Title-->
+                <div class="d-flex flex-column">
+                    <span class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Ndeye Saly Dione</span>
+                    <span class="text-muted font-weight-bold">Développeuse Web/mobile</span>
+                </div>
+                <!--end::Title-->
+            </div>
+            <div class="card profil-details" style="position: absolute;" *ngIf="showProfilPanel">
+                <ul>
+                    <li routerLink="profil"><a>Profil</a></li>
+                    <li>
+                        <a routerLink="profil">Déconnexion
+                            <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo1/dist/../src/media/svg/icons/Navigation/Sign-out.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"/>
+                                    <path d="M14.0069431,7.00607258 C13.4546584,7.00607258 13.0069431,6.55855153 13.0069431,6.00650634 C13.0069431,5.45446114 13.4546584,5.00694009 14.0069431,5.00694009 L15.0069431,5.00694009 C17.2160821,5.00694009 19.0069431,6.7970243 19.0069431,9.00520507 L19.0069431,15.001735 C19.0069431,17.2099158 17.2160821,19 15.0069431,19 L3.00694311,19 C0.797804106,19 -0.993056895,17.2099158 -0.993056895,15.001735 L-0.993056895,8.99826498 C-0.993056895,6.7900842 0.797804106,5 3.00694311,5 L4.00694793,5 C4.55923268,5 5.00694793,5.44752105 5.00694793,5.99956624 C5.00694793,6.55161144 4.55923268,6.99913249 4.00694793,6.99913249 L3.00694311,6.99913249 C1.90237361,6.99913249 1.00694311,7.89417459 1.00694311,8.99826498 L1.00694311,15.001735 C1.00694311,16.1058254 1.90237361,17.0008675 3.00694311,17.0008675 L15.0069431,17.0008675 C16.1115126,17.0008675 17.0069431,16.1058254 17.0069431,15.001735 L17.0069431,9.00520507 C17.0069431,7.90111468 16.1115126,7.00607258 15.0069431,7.00607258 L14.0069431,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.006943, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-9.006943, -12.000000) "/>
+                                    <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) rotate(-270.000000) translate(-14.000000, -12.000000) " x="13" y="6" width="2" height="12" rx="1"/>
+                                    <path d="M21.7928932,9.79289322 C22.1834175,9.40236893 22.8165825,9.40236893 23.2071068,9.79289322 C23.5976311,10.1834175 23.5976311,10.8165825 23.2071068,11.2071068 L20.2071068,14.2071068 C19.8165825,14.5976311 19.1834175,14.5976311 18.7928932,14.2071068 L15.7928932,11.2071068 C15.4023689,10.8165825 15.4023689,10.1834175 15.7928932,9.79289322 C16.1834175,9.40236893 16.8165825,9.40236893 17.2071068,9.79289322 L19.5,12.0857864 L21.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(19.500000, 12.000000) rotate(-90.000000) translate(-19.500000, -12.000000) "/>
+                                </g>
+                            </svg><!--end::Svg Icon--></span>
+                            
+                    </a></li>
+                </ul>
+            </div>
+
+          
+
+
+            <!-- <span class="rounded img-profil order-lg-last mb-2" style="z-index: 1;">
+                <img src="../../../assets/images/client/05.jpg" class="avatar avatar-large rounded-circle shadow d-block mx-auto src-profil w-100 h-100" alt="">
+            </span>
+            <span class="user-name order-lg-last ">
+                Ndeye Say Dione
+            </span> -->
+        </div>
+     
+        
+        <!-- <form action="#" class="searchform order-sm-start order-lg-last">
+        <div class="form-group d-flex">
+        <input type="text" class="form-control pl-3" placeholder="Search">
+        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+      </div>
+   
+    </form> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav m-auto">
+            <li class="nav-item"><a href="#" class="nav-link">Aide</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">L'équipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- END nav -->
+
+
+</section>

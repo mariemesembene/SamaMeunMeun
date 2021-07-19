@@ -1,0 +1,38 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "workbench.sideBar.location": "left",
+    "window.zoomLevel": 0,
+
+    "liveSassCompile.settings.formats":[
+        // More Complex
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        },
+
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "files.autoSave": "off",
+    "liveSassCompile.settings.excludeList": [
+        
+
+
+
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "terminal.integrated.shellArgs.windows": "null",
+    "liveSassCompile.settings.autoprefix": [],
+    "workbench.welcomePage.hiddenCategories": [
+        "Beginner",
+        "Setup"
+    ]
+}
