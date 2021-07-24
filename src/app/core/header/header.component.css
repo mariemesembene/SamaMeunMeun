@@ -14,24 +14,19 @@ li{
     list-style: none;
 }
 
-/* .fa-bell{
-    color: red;
-} */
-
-/* .logo{
-    width: 17em;
-    height: 7em;
-    padding-bottom: 20px;
+.panel-link{
+    cursor: pointer;
 }
 
-.src-logo{
-    height: 100%;
-    width: 100%;
-} */
+.panel-link :hover{
+    color: #3EB1BA;
+}
 
 /* ftco-section */
 .navbar{
-    border-bottom: 0.01px solid rgba(0, 0, 255, 0.212);
-    background-color: red;
+    border-bottom: 0.01px solid #00000023;
+    padding-top: 0px;
 }
+
+
 

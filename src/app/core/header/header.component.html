@@ -26,7 +26,7 @@
         </div>
     </div> -->
     <nav class="navbar navbar-expand-lg navbar-white ftco_navbar bg-white ftco-navbar-light  fixed-top" id="ftco-navbar">
-    <div class="container test">
+    <div class="container">
         <a class="navbar-brand logo" href="index.html">
             SamaMeunMeun
             <!-- Papermag <span>Magazine</span> -->
@@ -73,9 +73,9 @@
             </div>
             <div class="card profil-details" style="position: absolute;" *ngIf="showProfilPanel">
                 <ul>
-                    <li routerLink="profil"><a>Profil</a></li>
+                    <li routerLink="/profil" class="panel-link"><a>Profil</a></li>
                     <li>
-                        <a routerLink="profil">Déconnexion
+                        <a>Déconnexion
                             <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo1/dist/../src/media/svg/icons/Navigation/Sign-out.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24"/>
@@ -113,8 +113,8 @@
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav m-auto">
-            <li class="nav-item"><a href="#" class="nav-link">Aide</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">L'équipe</a></li>
+            <li class="nav-item"><a routerLink="/help" class="nav-link">Aide</a></li>
+          <li class="nav-item"><a routerLink="/concept" class="nav-link">L'équipe</a></li>
         </ul>
       </div>
     </div>

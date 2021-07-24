@@ -34,7 +34,7 @@
 .form-check-input.form-check-input:checked,
 .qs-datepicker-container .qs-squares .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover, 
 .qs-datepicker-container .qs-squares .qs-square.qs-current {
-    background-color: #2f55d4 !important;
+    background-color: #3EB1BA !important;
 }
 
 
@@ -95,7 +95,7 @@
 .accordion .accordion-button:not(.collapsed),
 .accordion .accordion-item .accordion-button:before,
 #navmenu-nav li.active a {
-    color: #2f55d4 !important;
+    color: #3EB1BA !important;
 }
 
 .btn-primary,
@@ -129,7 +129,7 @@
 .pricing-rates.starter-plan,
 .event-schedule:hover,
 .container-filter li.active, .container-filter li:hover{
-    border-color: #2f55d4 !important;
+    border-color: #3EB1BA !important;
 }
 
 .bg-soft-primary,
@@ -144,12 +144,12 @@
 .social-feature-left:after,
 .social-feature-right:after,
 .event-schedule .date .day {
-    background-color: rgba(47, 85, 212, 0.1) !important;
+    background-color: #308d94 !important;
 }
 
 .bg-soft-primary,
 .btn-soft-primary {
-    border: 1px solid rgba(47, 85, 212, 0.1) !important;
+    border: 1px solid #308d94 !important;
 }
 
 .app-feature-shape-right:after,
@@ -158,11 +158,11 @@
 .saas-feature-shape-right:after,
 .social-feature-left:after,
 .social-feature-right:after {
-    box-shadow: 0 0 40px rgba(47, 85, 212, 0.1);
+    box-shadow: 0 0 40px #308d94;
 }
 
 .event-schedule .date .day {
-    box-shadow: 0px 0px 2px 0.25px rgba(47, 85, 212, 0.5);
+    box-shadow: 0px 0px 2px 0.25px #308d94;
 }
 
 .btn-primary,
@@ -173,32 +173,32 @@
 .btn-outline-primary.active, 
 .btn-outline-primary.focus, 
 .btn-outline-primary:not(:disabled):not(.disabled):active {
-    box-shadow: 0 3px 5px 0 rgba(47, 85, 212, 0.3);
+    box-shadow: 0 3px 5px 0 #308d94;
 }
 
 .alert-primary,
 .pagination .page-item .page-link:hover,
 ::selection {
-    background: rgba(47, 85, 212, 0.9);
-    border-color: rgba(47, 85, 212, 0.9);
+    background: #308d94;
+    border-color: #308d94;
 }
 
 .social-icon li a:hover .fea-social {
-    fill: #2f55d4;
+    fill: #3EB1BA;
 }
 
 .bg-circle-gradiant {
-    background: radial-gradient(circle at 50% 50%, rgba(47, 85, 212, 0.1) 0%, rgba(47, 85, 212, 0.1) 33.333%, rgba(47, 85, 212, 0.3) 33.333%, rgba(47, 85, 212, 0.3) 66.666%, rgba(47, 85, 212, 0.5) 66.666%, rgba(47, 85, 212, 0.5) 99.999%);
+    background: radial-gradient(circle at 50% 50%, rgba(47, 85, 212, 0.1) 0%, rgba(47, 85, 212, 0.1) 33.333%, rgba(47, 85, 212, 0.3) 33.333%, rgba(47, 85, 212, 0.3) 66.666%, #3EB1BA 66.666%, #3EB1BA 99.999%);
 }
 
 .tns-nav button {
-    background: rgba(47, 85, 212, 0.5) !important;
+    background: #308d94 !important;
 }
 
 .classic-app-image .bg-app-shape:after,
 .classic-saas-image .bg-saas-shape:after,
 .freelance-hero .bg-shape:after {
-    box-shadow: 0 0 40px rgba(47, 85, 212, 0.5);
+    box-shadow: 0 0 40px #308d94;
 }
 
 .freelance-hero .bg-shape:after {
@@ -206,30 +206,30 @@
 }
 
 .key-feature .icon {
-    background: linear-gradient(45deg, transparent, rgba(47, 85, 212, 0.15));
+    background: linear-gradient(45deg, transparent, #308d94);
 }
 
 .features .image:before {
-    background: linear-gradient(45deg, transparent, rgba(47, 85, 212, 0.1));
+    background: linear-gradient(45deg, transparent, #308d94);
 }
 
 .home-wrapper:before {
-    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 85, 212, 0.3)), to(transparent));
-    background: linear-gradient(90deg, rgba(47, 85, 212, 0.3), transparent);
+    background: -webkit-gradient(linear, left top, right top, from(#308d94));
+    background: linear-gradient(90deg, #308d94, transparent);
 }
 
 .play-icon i {
-    -webkit-text-stroke: 2px #2f55d4;
+    -webkit-text-stroke: 2px #3EB1BA;
     -webkit-text-fill-color: transparent;
 }
 
 .play-icon i:hover {
-    -webkit-text-stroke: 2px #2f55d4;
-    -webkit-text-fill-color: #2f55d4;
+    -webkit-text-stroke: 2px #3EB1BA;
+    -webkit-text-fill-color: #3EB1BA;
 }
 a.text-primary:hover, 
 a.text-primary:focus {
-    color: #284bc1 !important;
+    color: #308d94 !important;
 }
 
 .btn-primary:hover, 
@@ -237,16 +237,16 @@ a.text-primary:focus {
 .btn-primary:active, 
 .btn-primary.active, 
 .btn-primary.focus {
-    background-color: #2443ac !important;
-    border-color: #2443ac !important;
+    background-color: #308d94 !important;
+    border-color: #308d94 !important;
 }
 
 .ribbon.ribbon-primary span:before {
-    border-left-color: #2443ac;
-    border-top-color: #2443ac;
+    border-left-color: #308d94;
+    border-top-color: #308d94;
 }
 
 .ribbon.ribbon-primary span:after {
-    border-right-color: #2443ac;
-    border-top-color: #2443ac;
+    border-right-color: #308d94;
+    border-top-color: #308d94;
 }

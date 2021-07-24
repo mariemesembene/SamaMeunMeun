@@ -12,4 +12,17 @@ export class ProfilComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isShownMyProfil: boolean = true;
+  isShownSettings: boolean = false;
+
+  showMyProfil(){
+    this.isShownMyProfil = true;
+    this.isShownSettings = false
+  }
+
+  showSettings(){
+    this.isShownMyProfil = false;
+    this.isShownSettings = true
+  }
+
 }

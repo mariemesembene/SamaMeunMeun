@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,8 @@ import { ClickOutsideModule } from 'ng-click-outside';
   declarations: [HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent, FooterComponent, ClickOutsideModule
