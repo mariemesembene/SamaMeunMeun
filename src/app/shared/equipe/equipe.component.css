@@ -1,0 +1,7 @@
+.team-item{
+    margin-top: 5em;
+}
+@media only screen and (min-width: 769px) {
+.img-contact{
+    margin-left: 8em;
+}}

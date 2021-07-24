@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "SamaMeunMeun"
+  "defaultProject": "SamaMeunMeun",
+  "cli": {
+    "analytics": false
+  }
 }
