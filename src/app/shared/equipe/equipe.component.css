@@ -5,3 +5,9 @@
 .img-contact{
     margin-left: 8em;
 }}
+@media only screen and (min-width: 769px){
+    .sommes{
+        margin-top: 3em;
+
+    }
+}
