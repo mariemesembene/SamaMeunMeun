@@ -3111,6 +3111,7 @@ p {
   background: linear-gradient(45deg, transparent, rgba(47, 85, 212, 0.1));
 }
 
+
 .features.feature-clean .icons i {
   height: 65px;
   width: 65px;
@@ -4933,6 +4934,12 @@ p {
 @media only screen and (min-width: 769px) {
   .card-publication{
       margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .img-login{
+     margin-right: 10em;
+     /* float: left; */
   }
 }
 
