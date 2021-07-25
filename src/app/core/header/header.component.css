@@ -28,5 +28,28 @@ li{
     padding-top: 0px;
 }
 
+.logo-img{
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.text-logo{
+    display: inline-block;
+    margin-left: -20px;
+}
+
+
+.src-logo{
+    width: 10%;
+    height: 10%;
+    margin-top: -3em;
+}
+
+/* @media only screen and (min-width: 769px) { */
+    .logo{
+        height: 2em;
+    }
+/* } */
+
 
 
