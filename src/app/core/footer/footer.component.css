@@ -1,7 +1,7 @@
 footer{
-    background-color: #1BC5BD;;
+    background-color: #FFFFFF;
     text-align: center;
-    color: white;
+    /* color: #1BC5BD; */
    
     
 }
@@ -9,4 +9,14 @@ footer{
 
    margin-bottom: -100px;
    
+}
+
+.footer-section{
+    border-top: 0.01px solid #00000023;
+    color: #666666;
+    margin-left: 5px;
+}
+
+.footer-text{
+    text-align: center;
 }
