@@ -1,0 +1,57 @@
+<app-header></app-header>
+<section class=" border-bottom agency-wrapper d-table w-100  " id="home">
+    <div class="container  mt-5 card-publication ">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7 order-1 order-md-2">
+                
+                    <div class="card rounded shadow border-0 ms-lg-4" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row">
+                                    
+                                    <div class="col-md-12" >
+                                        <div class="mb-3">
+                                            <ngx-dropzone (change)="onSelect($event)">
+                                                <ngx-dropzone-label>selectionner une vidéo à partager</ngx-dropzone-label>
+                                                <ngx-dropzone-video-preview class="w-100" ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f">
+                                                    <ngx-dropzone-label></ngx-dropzone-label>
+                                                  </ngx-dropzone-video-preview>
+                                            </ngx-dropzone>
+
+                                        </div>
+                                    </div>
+                                  
+                                    
+                                
+                                   
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Description :</label>
+                                            <div class="form-icon position-relative">
+                                                <i data-feather="message-circle" class=" fa fa-comment icons"></i>
+                                            
+                                                <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    
+                                </div><!--end row-->
+    
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="submit" id="submit" name="send" class="btn btn-primary" value="publier">
+                                    </div><!--end col-->
+                                </div><!--end row-->
+                            </form>
+                        </div>
+                    </div>
+                
+            </div><!--end col-->
+
+            <div class="col-lg-5 col-md-5 order-2 order-md-1 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <img src="../../../assets/images/undraw_uploading_go67 (1).svg" class="img-fluid" alt="">
+            </div>
+        </div><!--end row-->
+    </div><!--end container--> 
+</section><!--end section-->
+<app-footer class="fixed-bottom"></app-footer>

@@ -8,15 +8,18 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CoreModule } from '../core/core.module';
+import { PublierComponent } from './publier/publier.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 
 
 @NgModule({
-  declarations: [ListPublicationsComponent, ProfilComponent, HelpComponent, EquipeComponent, LoginComponent, SignupComponent],
+  declarations: [ListPublicationsComponent, ProfilComponent, HelpComponent, EquipeComponent, LoginComponent, SignupComponent, PublierComponent],
   imports: [
     CommonModule,
     RouterModule,
-    CoreModule
+    CoreModule,
+    NgxDropzoneModule
   ],
   exports: [
     ListPublicationsComponent,

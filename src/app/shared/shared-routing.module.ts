@@ -5,6 +5,7 @@ import { HelpComponent } from "./help/help.component";
 import { ListPublicationsComponent } from "./list-publications/list-publications.component";
 import { LoginComponent } from "./login/login.component";
 import { ProfilComponent } from "./profil/profil.component";
+import { PublierComponent } from "./publier/publier.component";
 import { SignupComponent } from "./signup/signup.component";
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
     {
       path:'concept',
       component:EquipeComponent,
+    },
+    {
+      path:'publier',
+      component:PublierComponent,
     },
   ];
   
