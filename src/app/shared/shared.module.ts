@@ -24,8 +24,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
   exports: [
     ListPublicationsComponent,
     ProfilComponent,
-    HelpComponent,
-    
+    HelpComponent    
   ]
 })
 export class SharedModule { }
