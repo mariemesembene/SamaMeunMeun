@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Comment } from 'src/app/core/models/Comment';
 import { YoutubeService } from 'src/app/core/services/youtube.service';
 
 @Component({
@@ -11,6 +12,11 @@ export class ListPublicationsComponent implements OnInit {
   constructor(private youtubeService: YoutubeService) { }
 
   videos: any[] = ["1", "2"];
+
+  // tableau contenant la liste des commentaires
+  // si le parent-comment-id est null, ça veut dire le commentaire est un
+  // commentaire principal
+  comments: Comment[];
 
   test: any = "hello";
 
@@ -34,6 +40,7 @@ export class ListPublicationsComponent implements OnInit {
     this.videos = [];
     this.youtubeService.getVideosFromChannel('UCdQuSklyXrfjOdqJ0wHqBng', 15)
     .subscribe(list => {
+      console.log(list)
       // this.videos.push(list);
       this.videos = list.items;
       console.log(this.videos);
