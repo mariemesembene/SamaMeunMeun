@@ -10,6 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { CoreModule } from '../core/core.module';
 import { PublierComponent } from './publier/publier.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
 
 
 
@@ -19,7 +21,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     CommonModule,
     RouterModule,
     CoreModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    YouTubePlayerModule
   ],
   exports: [
     ListPublicationsComponent,

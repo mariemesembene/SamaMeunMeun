@@ -13,6 +13,8 @@ export class YoutubeService {
   constructor(private http: HttpClient) { 
   }
 
+  // enlever le &part=snippet pour tester
+
   getVideosFromChannel(channel, maxResults): Observable<any>{
     let url = 'https://www.googleapis.com/youtube/v3/search?key=' + this.apiKey + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults
     return this.http.get(url)

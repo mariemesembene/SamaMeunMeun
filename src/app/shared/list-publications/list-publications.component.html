@@ -40,9 +40,9 @@
 <!-- Blog STart -->
 <section class="section">
   <div class="container">
-    <div class="row card-publication">
+    <div class="row card-publication" *ngFor="let video of videos">
       <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
+        <div class="card rounded border-0 shadow overflow-hidden">
           <div class="card-header">
             <div class="d-flex align-items-center mb-7">
               <!--begin::Pic-->
@@ -93,18 +93,28 @@
             </div>
           </div>
           <div class="position-relative">
-            <img
+            <!-- <img
               src="../../../assets/images/blog/01.jpg"
               class="card-img-top"
               alt="..."
-            />
+            /> -->
+
+            <youtube-player 
+            videoId={{video.id.videoId}}
+            suggestedQuality="highres"
+            width="100%" 
+            listType=playlist
+            rel=0
+
+            >
+          </youtube-player>
             <div class="overlay rounded-top bg-dark"></div>
           </div>
           <div class="card-body content">
             <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
+              <p class="card-title title text-dark"
+                >{{video.snippet.description}}
+              </p>
             </h5>
             <div class="post-meta d-flex justify-content-between mt-3">
               <ul class="list-unstyled mb-0">
@@ -114,8 +124,8 @@
                   >
                 </li>
                 <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
+                  <span (click)="comment()" class="text-muted comments"
+                    ><i class="uil uil-comment me-1"></i>08</span
                   >
                 </li>
               </ul>
@@ -126,99 +136,10 @@
 
               <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
             </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
-
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
+            <div>
+              <div class="form-group mt-3">
+                <input type="test" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ajouter un commentaire... ">
               </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
             </div>
           </div>
           <!-- <div class="author">
@@ -229,557 +150,9 @@
       </div>
       <!--end col-->
 
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
+      
 
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
-
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
-
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
-
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
-
-      <div class="col-lg-6 col-md-6 mb-4 pb-2">
-        <div class="card blog rounded border-0 shadow overflow-hidden">
-          <div class="card-header">
-            <div class="d-flex align-items-center mb-7">
-              <!--begin::Pic-->
-              <div class="flex-shrink-0">
-                <div class="rounded img-user-post mb-2" style="z-index: 1">
-                  <img
-                    src="../../../assets/images/client/05.jpg"
-                    class="
-                      avatar avatar-large
-                      rounded-circle
-                      shadow
-                      d-block
-                      mx-auto
-                      w-100
-                      h-100
-                    "
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="
-                    symbol symbol-lg-75 symbol-circle symbol-primary
-                    d-none
-                  "
-                >
-                  <span class="font-size-h3 font-weight-boldest">JM</span>
-                </div>
-              </div>
-              <!--end::Pic-->
-              <!--begin::Title-->
-              <div class="d-flex flex-column">
-                <a
-                  href="#"
-                  class="
-                    text-dark
-                    font-weight-bold
-                    text-hover-primary
-                    font-size-h4
-                    mb-0
-                  "
-                  >Ndeye Saly Dione</a
-                >
-                <span class="text-muted font-weight-bold"
-                  >Développeuse Web/mobile</span
-                >
-              </div>
-              <!--end::Title-->
-            </div>
-          </div>
-          <div class="position-relative">
-            <img
-              src="../../../assets/images/blog/01.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="overlay rounded-top bg-dark"></div>
-          </div>
-          <div class="card-body content">
-            <h5>
-              <a href="javascript:void(0)" class="card-title title text-dark"
-                >Design your apps in your own way</a
-              >
-            </h5>
-            <div class="post-meta d-flex justify-content-between mt-3">
-              <ul class="list-unstyled mb-0">
-                <li class="list-inline-item me-2 mb-0">
-                  <a href="javascript:void(0)" class="text-muted like"
-                    ><i class="uil uil-heart me-1"></i>33</a
-                  >
-                </li>
-                <li class="list-inline-item">
-                  <a href="javascript:void(0)" class="text-muted comments"
-                    ><i class="uil uil-comment me-1"></i>08</a
-                  >
-                </li>
-              </ul>
-              <div class="text-muted font-weight-bold">
-                ndeyesalydione@gmail.com
-              </div>
-              <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
-            </div>
-          </div>
-          <!-- <div class="author">
-                            <small class="text-light user d-block"><i class="uil uil-user"></i> Calvin Carlo</small>
-                            <small class="text-light date"><i class="uil uil-calendar-alt"></i> 13th August, 2019</small>
-                        </div> -->
-        </div>
-      </div>
-      <!--end col-->
+     
 
       <!-- PAGINATION START -->
       <div class="col-12">
@@ -816,20 +189,7 @@
 <!-- Blog End -->
 
 <!-- test youtube api -->
-<div>Test YAPI</div>
-<div>{{videos}}</div>
-<div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
-  <div class="card border-0 shadow vh-50">
-  <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
-  <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
-  <div class="card-body text-center">
-  <h5 class="card-title mb-0">
-  <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
-  </a></h5>
-  <div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>
-  <p class="card-text">{{video.snippet.description}}</p>
-  </div>
-  </div>
-  </div>
+
+
 
 <app-footer></app-footer>
