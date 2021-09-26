@@ -92,12 +92,16 @@
               <!--end::Title-->
             </div>
           </div>
+          <!-- <div>{{video.id.videoId}}</div> -->
           <div class="position-relative">
             <!-- <img
               src="../../../assets/images/blog/01.jpg"
               class="card-img-top"
               alt="..."
             /> -->
+            <!-- <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe> -->
 
             <youtube-player 
             videoId={{video.id.videoId}}
@@ -123,7 +127,7 @@
                     ><i class="uil uil-heart me-1"></i>33</a
                   >
                 </li>
-                <li class="list-inline-item">
+                <li class="list-inline-item" role="button">
                   <span (click)="comment()" class="text-muted comments"
                     ><i class="uil uil-comment me-1"></i>08</span
                   >
@@ -137,8 +141,8 @@
               <!-- <a href="page-blog-detail.html" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a> -->
             </div>
             <div>
-              <div class="form-group mt-3">
-                <input type="test" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ajouter un commentaire... ">
+              <div *ngIf="isShowComments" class="form-group mt-3">
+                <input type="test" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ajouter un commentaire... " autofocus>
               </div>
             </div>
           </div>

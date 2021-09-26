@@ -16,6 +16,8 @@ export class ListPublicationsComponent implements OnInit {
 
   linkVideos: any[] = [];
 
+  isShowComments = false;
+
 
   ngOnInit(): void {
     const tag = document.createElement('script');
@@ -51,7 +53,7 @@ export class ListPublicationsComponent implements OnInit {
 
   // fonction permettant de commenter ou de lister les commentaires
   comment(){
-    
+    this.isShowComments = !this.isShowComments;
   }
 
 
