@@ -1,4 +1,21 @@
-.icon-notification{
+.menu-item {
+    float: left;
+    display: block;
+    text-align: center;
+  }
+  
+  .menu-item .menu-title {
+    display: block;
+    /* margin-top: 5px; */
+  }
+
+  .menu-title{
+      font-size: 10px;
+  }
+
+
+
+/* .icon-notification{
     margin-left: 15px;
 }
 
@@ -20,10 +37,10 @@ li{
 
 .panel-link :hover{
     color: #3EB1BA;
-}
+} */
 
 /* ftco-section */
-.navbar{
+/* .navbar{
     border-bottom: 0.01px solid #00000023;
     padding-top: 0px;
 }
@@ -43,12 +60,12 @@ li{
     width: 10%;
     height: 10%;
     margin-top: -3em;
-}
+} */
 
 /* @media only screen and (min-width: 769px) { */
-    .logo{
+    /* .logo{
         height: 2em;
-    }
+    } */
 /* } */
 
 

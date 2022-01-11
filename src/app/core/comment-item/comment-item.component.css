@@ -1,0 +1,39 @@
+.date {
+    font-size: 11px
+}
+
+.comment-text {
+    font-size: 14px
+}
+
+.fs-12 {
+    font-size: 12px
+}
+
+.shadow-none {
+    box-shadow: none
+}
+
+.name {
+    color: #3EB1BA
+}
+
+.cursor:hover {
+    color: #3EB1BA
+}
+
+.cursor {
+    cursor: pointer
+}
+
+  textarea {
+    margin:0px 0px;
+    padding:5px;
+    height:30px;
+    border-radius: 5px;
+    line-height:16px;
+    width:96%;
+    display:block;
+    margin:0px auto;    
+  }
+  

@@ -42,6 +42,26 @@
   }
 }
 
+.reply-content{
+  padding-left: 2em;
+}
+
+.icon-outline{
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-reply{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.span-reply{
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
 
 
 
@@ -1652,6 +1672,10 @@ button:not(:disabled) {
   background-color: #3EB1BA;
   border-color: #3EB1BA !important;
   color: #ffffff !important;
+}
+
+.icon-primary{
+  color: #3EB1BA;
 }
 
 .social-icon li a:hover .fea-social {

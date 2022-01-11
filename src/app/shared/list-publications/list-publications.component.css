@@ -1,4 +1,4 @@
-section{
+/* section{
     background-color: #F3F2EF;
 }
 
@@ -23,22 +23,78 @@ section{
   left: 0;
 }
 .width-machine {
-  /*   Sort of a magic number to add extra space for number spinner */
   padding: 0 1rem;
+} */
+  /* This solution was derived from: https://stackoverflow.com/questions/37629860/automatically-resizing-textarea-in-bootstrap */
+  /* textarea.textarea-autosize {
+    padding-top:10px;
+    padding-bottom:25px;
+    width:100%;
+    display:block;
+  } */
+
+  .date {
+    font-size: 14px
+}
+
+.comment-text {
+    font-size: 15px
+}
+
+.fs-12 {
+    font-size: 15px
+}
+
+.shadow-none {
+    box-shadow: none
+}
+
+/* .name {
+    color: #3EB1BA
+} */
+.cursor:hover {
+  color: #3EB1BA
+}
+
+.cursor {
+  cursor: pointer
 }
 
 .textarea {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  resize: none;
-  min-height: 10px;
-  line-height: 20px;
-  padding-top: 15px;
+  resize: none
 }
 
-.textarea[contenteditable]:empty::before {
-    /* display: inline-block; */
-  content: "Ajouter un commentaire...";
-  color: gray;
+.fa-facebook {
+  color: #3b5999
+}
+
+.fa-twitter {
+  color: #55acee
+}
+
+.fa-linkedin {
+  color: #0077B5
+}
+
+.fa-instagram {
+  color: #e4405f
+}
+.fa-dribbble {
+  color: #ea4c89
+}
+
+.fa-pinterest {
+  color: #bd081c
+}
+
+.fa {
+  cursor: pointer
+}
+
+.fa-heart, .more-comment-text{
+  color: #3EB1BA;
+}
+
+.more-comment-text{
+  font-style: italic;
 }

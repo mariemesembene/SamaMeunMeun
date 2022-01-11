@@ -1,132 +1,214 @@
-<section class="ftco-section card-publication">
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Website menu #06</h2>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div class="wrap">
-        <div class="container">
-            <div class="row justify-content-between">
-                    <div class="col">
-                        <p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">+00 1234 567</a></p>
-                    </div>
-                    <div class="col d-flex justify-content-end">
-                        <div class="social-media">
-                        <p class="mb-0 d-flex">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-                        </p>
-                </div>
-                    </div>
-            </div>
-        </div>
-    </div> -->
-    <nav class="navbar navbar-expand-lg navbar-white ftco_navbar bg-white ftco-navbar-light  fixed-top" id="ftco-navbar">
+<header id="topnav" class="defaultscroll sticky">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            
-            <!-- Papermag <span>Magazine</span> -->
-            <!-- <img src="../../../assets/images/logo-light.png" class="src-logo"  alt=""> -->
-            <span><img src="../../../assets/images/logos/img2.png"></span><span class="text-logo">SamaMeunMeun</span>
-
+        <!-- Logo container-->
+        <a class="logo" href="index.html">
+            <img src="../../../assets/images/logos/img2.png" height="50" class="logo-light-mode" alt="">
+            <!-- <img src="../../../assets/images/logos/smm_logo.png" height="30" class="logo-light-mode" alt=""> -->
+            <img  src="../../../assets/images/logos/img2.png" height="24" class="logo-dark-mode" alt="">
         </a>
-        <!-- <p>Test</p> -->
-        <div class="widget searchform order-sm-start order-lg-last mt-2">
-            <form role="search" method="get">
-                <div class="input-group mb-3 border rounded">
-                    <input type="text" id="s" name="s" class="form-control border-0" placeholder="Rechercher...">
-                    <button type="submit" class="input-group-text bg-transparent border-0" id="searchsubmit"><i class="uil uil-search"></i></button>
-                </div>
-            </form>
-        </div>
-         <div role="button" routerLink="/publier" class="order-lg-last icon-notification badge rounded-pill bg-dark">
-            
-            <!-- <button type="button" class="btn btn-primary position-relative"> -->
-                <!-- <span class="translate-middle "> -->
-                 publier
-                <!-- </span> -->
-              <!-- </button> -->
-        </div>
-        <div class="order-lg-last icon-notification">
-        <i class="fa fa-bell position-relative primary">
-            <!-- <button type="button" class="btn btn-primary position-relative"> -->
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-                  9
-                </span>
-              <!-- </button> -->
-        </i>
-        </div>
-        
-        <div class="order-lg-last" style="position: relative;">
-            <div class="d-flex align-items-center profil-section" (click)="showProfilDetails()" (clickOutside)="closeProfilPanel()">
-                <!--begin::Pic-->
-                <div class="flex-shrink-0">
-                    <div class="rounded img-profil" style="z-index: 1;">
-                        <img src="../../../assets/images/client/05.jpg" class="avatar avatar-large rounded-circle shadow d-block mx-auto w-100 h-100" alt="">
+        <div class="buy-button">
+            <a routerLink="/publier"  class="btn btn-pills btn-outline-primary px-5">Publier</a>
+        </div><!--end login button-->
+        <!-- End Logo container-->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                </div>
-                <!--end::Pic-->
-                <!--begin::Title-->
-                <div class="d-flex flex-column">
-                    <span class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Ndeye Saly Dione</span>
-                    <span class="text-muted font-weight-bold">Développeuse Web/mobile</span>
-                </div>
-                <!--end::Title-->
+                </a>
+                <!-- End mobile menu toggle-->
             </div>
-            <div class="card profil-details" style="position: absolute;" *ngIf="showProfilPanel">
-                <ul>
-                    <li routerLink="/profil" class="panel-link"><a>Profil</a></li>
-                    <li>
-                        <a>Déconnexion
-                            <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-05-14-112058/theme/html/demo1/dist/../src/media/svg/icons/Navigation/Sign-out.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <rect x="0" y="0" width="24" height="24"/>
-                                    <path d="M14.0069431,7.00607258 C13.4546584,7.00607258 13.0069431,6.55855153 13.0069431,6.00650634 C13.0069431,5.45446114 13.4546584,5.00694009 14.0069431,5.00694009 L15.0069431,5.00694009 C17.2160821,5.00694009 19.0069431,6.7970243 19.0069431,9.00520507 L19.0069431,15.001735 C19.0069431,17.2099158 17.2160821,19 15.0069431,19 L3.00694311,19 C0.797804106,19 -0.993056895,17.2099158 -0.993056895,15.001735 L-0.993056895,8.99826498 C-0.993056895,6.7900842 0.797804106,5 3.00694311,5 L4.00694793,5 C4.55923268,5 5.00694793,5.44752105 5.00694793,5.99956624 C5.00694793,6.55161144 4.55923268,6.99913249 4.00694793,6.99913249 L3.00694311,6.99913249 C1.90237361,6.99913249 1.00694311,7.89417459 1.00694311,8.99826498 L1.00694311,15.001735 C1.00694311,16.1058254 1.90237361,17.0008675 3.00694311,17.0008675 L15.0069431,17.0008675 C16.1115126,17.0008675 17.0069431,16.1058254 17.0069431,15.001735 L17.0069431,9.00520507 C17.0069431,7.90111468 16.1115126,7.00607258 15.0069431,7.00607258 L14.0069431,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.006943, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-9.006943, -12.000000) "/>
-                                    <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) rotate(-270.000000) translate(-14.000000, -12.000000) " x="13" y="6" width="2" height="12" rx="1"/>
-                                    <path d="M21.7928932,9.79289322 C22.1834175,9.40236893 22.8165825,9.40236893 23.2071068,9.79289322 C23.5976311,10.1834175 23.5976311,10.8165825 23.2071068,11.2071068 L20.2071068,14.2071068 C19.8165825,14.5976311 19.1834175,14.5976311 18.7928932,14.2071068 L15.7928932,11.2071068 C15.4023689,10.8165825 15.4023689,10.1834175 15.7928932,9.79289322 C16.1834175,9.40236893 16.8165825,9.40236893 17.2071068,9.79289322 L19.5,12.0857864 L21.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(19.500000, 12.000000) rotate(-90.000000) translate(-19.500000, -12.000000) "/>
-                                </g>
-                            </svg><!--end::Svg Icon--></span>
-                            
-                    </a></li>
-                </ul>
-            </div>
-
-          
-
-
-            <!-- <span class="rounded img-profil order-lg-last mb-2" style="z-index: 1;">
-                <img src="../../../assets/images/client/05.jpg" class="avatar avatar-large rounded-circle shadow d-block mx-auto src-profil w-100 h-100" alt="">
-            </span>
-            <span class="user-name order-lg-last ">
-                Ndeye Say Dione
-            </span> -->
         </div>
-     
-        
-        <!-- <form action="#" class="searchform order-sm-start order-lg-last">
-        <div class="form-group d-flex">
-        <input type="text" class="form-control pl-3" placeholder="Search">
-        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-      </div>
-   
-    </form> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fa fa-bars"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav m-auto">
-            <li class="nav-item"><a routerLink="/publications" class="nav-link"> Accueil</a></li>
-            <li class="nav-item"><a routerLink="/help" class="nav-link">Aide</a></li>
-          <li class="nav-item"><a routerLink="/concept" class="nav-link">L'équipe</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<!-- END nav -->
+
+        <div id="navigation">
+            <!-- Navigation Menu-->   
+            <ul class="navigation-menu">
+                <li>
+                    <a routerLink="/publications"  class="sub-menu-item text menu-item">
+                        <i class="fa fa-home" style="font-size: 19px;"></i>
+                        <span class="menu-title">Accueil</span>
+                    </a>
+                </li>
+                <li class="has-submenu parent-parent-menu-item">
+                    <a routerLink="/help" class="sub-menu-item text menu-item">
+                        <i class="fa fa-question" style="font-size: 19px;"></i>
+                        <span class="menu-title">Aide</span>
+                    </a>
+                </li>
+
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="index.html" class="sub-menu-item text menu-item">
+                        <i class="fa fa-bell" style="font-size: 19px;"></i>
+                        <span class="menu-title">Notification</span>
+                    </a>
+                    <!-- <ul class="submenu">
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Company </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-aboutus.html" class="sub-menu-item"> About Us</a></li>
+                                <li><a href="page-aboutus-two.html" class="sub-menu-item"> About Us Two </a></li>
+                                <li><a href="page-services.html" class="sub-menu-item">Services</a></li>
+                                <li><a href="page-history.html" class="sub-menu-item">History </a></li>
+                                <li><a href="page-team.html" class="sub-menu-item"> Team</a></li>
+                                <li><a href="page-pricing.html" class="sub-menu-item">Pricing</a></li>
+                            </ul> 
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Account </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="account-profile.html" class="sub-menu-item">Profile</a></li>
+                                <li><a href="account-members.html" class="sub-menu-item">Members </a></li>
+                                <li><a href="account-works.html" class="sub-menu-item">Works </a></li>
+                                <li><a href="account-messages.html" class="sub-menu-item">Messages </a></li>
+                                <li><a href="account-payments.html" class="sub-menu-item">Payments </a></li>
+                                <li><a href="account-setting.html" class="sub-menu-item">Setting</a></li>
+                                <li><a href="page-invoice.html" class="sub-menu-item">Invoice</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Shop</a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="shop-grids.html" class="sub-menu-item">Product Grids</a></li>
+                                <li><a href="shop-lists.html" class="sub-menu-item">Product List</a></li>
+                                <li><a href="shop-product-detail.html" class="sub-menu-item">Product Details</a></li>
+                                <li><a href="shop-cart.html" class="sub-menu-item">Shop Cart</a></li>
+                                <li><a href="shop-checkouts.html" class="sub-menu-item">Checkouts</a></li>
+                                <li><a href="shop-myaccount.html" class="sub-menu-item">My Account</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Help center </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="helpcenter-overview.html" class="sub-menu-item">Helpcenter</a></li>
+                                <li><a href="helpcenter-faqs.html" class="sub-menu-item">Faqs</a></li>
+                                <li><a href="helpcenter-guides.html" class="sub-menu-item">Guides</a></li>
+                                <li><a href="helpcenter-support-request.html" class="sub-menu-item">Support Call</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Forums </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="forums.html" class="sub-menu-item">Overview </a></li>
+                                <li><a href="forums-topic.html" class="sub-menu-item">Forum Topic </a></li>
+                                <li><a href="forums-comments.html" class="sub-menu-item">Forum Comments </a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Email Template</a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="email-confirmation.html" class="sub-menu-item">Confirmation</a></li>
+                                <li><a href="email-password-reset.html" class="sub-menu-item">Reset Password</a></li>
+                                <li><a href="email-alert.html" class="sub-menu-item">Alert</a></li>
+                                <li><a href="email-invoice.html" class="sub-menu-item">Invoice</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)">Careers</a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-jobs.html" class="sub-menu-item">Jobs</a></li>
+                                <li><a href="page-jobs-sidebar.html" class="sub-menu-item">Jobs - Sidebar</a></li>
+                                <li><a href="page-job-detail.html" class="sub-menu-item">Job Detail</a></li>
+                                <li><a href="page-job-apply.html" class="sub-menu-item">Job Apply</a></li>
+                                <li><a href="page-job-company-list.html" class="sub-menu-item">Company Listing</a></li>
+                                <li><a href="page-job-company.html" class="sub-menu-item">Company Detail</a></li>
+                                <li><a href="page-job-candidate-list.html" class="sub-menu-item">Candidate Listing</a></li>
+                                <li><a href="page-job-candidate.html" class="sub-menu-item">Candidate Detail</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Blog </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-blog-grid.html" class="sub-menu-item">Blog Grid</a></li>
+                                <li><a href="page-blog-sidebar.html" class="sub-menu-item">Blog with Sidebar</a></li>
+                                <li><a href="page-blog-list.html" class="sub-menu-item">Blog Listing</a></li>
+                                <li><a href="page-blog-list-sidebar.html" class="sub-menu-item">Blog List & Sidebar</a></li>
+                                <li><a href="page-blog-detail.html" class="sub-menu-item">Blog Detail</a></li>
+                                <li><a href="page-blog-detail-two.html" class="sub-menu-item">Blog Detail 2 </a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Case Study </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-cases.html" class="sub-menu-item">All Cases </a></li>
+                                <li><a href="page-case-detail.html" class="sub-menu-item">Case Detail </a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Auth Pages</a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="auth-login.html" class="sub-menu-item">Login</a></li>
+                                <li><a href="auth-cover-login.html" class="sub-menu-item">Login Cover</a></li>
+                                <li><a href="auth-login-three.html" class="sub-menu-item">Login Simple</a></li>
+                                <li><a href="auth-signup.html" class="sub-menu-item">Signup</a></li>
+                                <li><a href="auth-cover-signup.html" class="sub-menu-item">Signup Cover</a></li>
+                                <li><a href="auth-signup-three.html" class="sub-menu-item">Signup Simple</a></li>
+                                <li><a href="auth-re-password.html" class="sub-menu-item">Reset Password</a></li>
+                                <li><a href="auth-cover-re-password.html" class="sub-menu-item">Reset Password Cover</a></li>
+                                <li><a href="auth-re-password-three.html" class="sub-menu-item">Reset Password Simple</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Utility </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-terms.html" class="sub-menu-item">Terms of Services</a></li>
+                                <li><a href="page-privacy.html" class="sub-menu-item">Privacy Policy</a></li>
+                            </ul>  
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Special</a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-comingsoon.html" class="sub-menu-item">Coming Soon</a></li>
+                                <li><a href="page-comingsoon2.html" class="sub-menu-item">Coming Soon Two</a></li>
+                                <li><a href="page-maintenance.html" class="sub-menu-item">Maintenance</a></li>
+                                <li><a href="page-error.html" class="sub-menu-item">Error</a></li>
+                                <li><a href="page-thankyou.html" class="sub-menu-item">Thank you</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Contact </a><span class="submenu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="page-contact-detail.html" class="sub-menu-item">Contact Detail</a></li>
+                                <li><a href="page-contact-one.html" class="sub-menu-item">Contact One</a></li>
+                                <li><a href="page-contact-two.html" class="sub-menu-item">Contact Two</a></li>
+                                <li><a href="page-contact-three.html" class="sub-menu-item">Contact Three</a></li>
+                            </ul>  
+                        </li>
+                    </ul> -->
+                </li>
+
+                <!-- <li class="has-submenu parent-parent-menu-item">
+                    <a routerLink="/concept" class="sub-menu-item text menu-item">
+                        <i class="fa fa-users" style="font-size: 19px;"></i>
+                        <span class="menu-title">Equipe</span>
+                    </a>
+                </li> -->
+                <li class="has-submenu parent-menu-item  ">
+                    <a href="javascript:void(0)">
+                            <img src="../../../assets/images/client/avatar-user.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="">
+                    </a><span class="menu-arrow"></span>
+                    <ul class="submenu">
+                        <li><a routerLink="/profil" class="sub-menu-item">Profil</a></li>
+                        <li><a href="changelog.html" class="sub-menu-item">Déconnexion</a></li>
+                    </ul>
+                </li>
+            </ul><!--end navigation menu-->
+            <div class="buy-menu-btn d-none">
+                <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Publier</a>
+            </div><!--end login button-->
+        </div><!--end navigation-->
+    </div><!--end container-->
+
+  
+</header>
 
 
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

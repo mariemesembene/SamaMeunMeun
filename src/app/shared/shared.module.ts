@@ -11,6 +11,7 @@ import { CoreModule } from '../core/core.module';
 import { PublierComponent } from './publier/publier.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +23,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     RouterModule,
     CoreModule,
     NgxDropzoneModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ListPublicationsComponent,
