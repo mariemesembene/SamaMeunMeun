@@ -98,3 +98,10 @@
 .more-comment-text{
   font-style: italic;
 }
+
+.rep-view-section{
+  font-style: italic;
+  font-size: 12px;
+  color: #3EB1BA;
+  text-decoration: underline;
+}

@@ -1,22 +1,8 @@
+import { User } from "./User";
+
 export interface Reply{
-    "kind": string
-    "etag": string
-    "id": string
-    "snippet": {
-        "videoId": string
-        "textDisplay": string
-        "textOriginal": string
-        "parentId": string
-        "authorDisplayName": string
-        "authorProfileImageUrl": string
-        "authorChannelUrl": string
-        "authorChannelId": {
-            "value": string
-        },
-        "canRate": boolean
-        "viewerRating": string
-        "likeCount": number
-        "publishedAt": string
-        "updatedAt": string
-    }
+    "id": number
+    "comment": Comment,
+    "display_text": string
+    "user": User
 }

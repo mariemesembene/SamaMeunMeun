@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { EquipeComponent } from "./equipe/equipe.component";
 import { HelpComponent } from "./help/help.component";
 import { ListPublicationsComponent } from "./list-publications/list-publications.component";
+import { ListUsersLikeComponent } from "./list-users-like/list-users-like.component";
 import { LoginComponent } from "./login/login.component";
 import { ProfilComponent } from "./profil/profil.component";
 import { PublierComponent } from "./publier/publier.component";
@@ -42,6 +43,10 @@ const routes: Routes = [
     {
       path:'publier',
       component:PublierComponent,
+    },
+    {
+      path:'users-like',
+      component:ListUsersLikeComponent,
     },
   ];
   

@@ -2,11 +2,9 @@ import { Publication } from "./Publication";
 import { Reply } from "./Reply";
 import { User } from "./User";
 
-export interface Comment{
+export interface likeComment
+{
     "id": number
-    "user": User
-    "video": Publication
-    "displayText": string,
-    "replies": Reply[]
-
+    "comment"?: Comment
+    "reply"?: Reply
 }

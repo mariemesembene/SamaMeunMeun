@@ -1,5 +1,9 @@
-export interface User{
+export interface User
+{
     "id": number
-    "prenom": string
-    "nom": string
+    "email": string
+    "roles": string
+    "firstName": string
+    "photoUrl": string
+    "lastName": string
 }

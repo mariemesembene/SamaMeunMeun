@@ -1,0 +1,48 @@
+<div>
+    <app-header></app-header>
+</div>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2" *ngFor="let like of data">
+                        <div class="candidate-list card rounded border-0 shadow">
+                            <div class="card-body">
+                                <ul class="list-unstyled align-items-center">
+                                    <!-- <li class="list-inline-item float-end"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart h5 mb-0"></i></a></li> -->
+                                    <li class="list-inline-item"><span class="badge rounded-pill bg-soft-success">aime</span></li>
+                                </ul>
+
+                                <div class="content text-center">
+                                    <img src="{{like.user.photoUrl}}" class="avatar avatar-md-md shadow-md rounded-circle" alt="">
+                                    <!-- <ul class="list-unstyled mb-1 mt-2">
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                                    </ul> -->
+                                    <div class="text-dark h5 name">{{like.user.firstName + like.user.lastName}}</div>
+                                    <!-- <p class="my-1">profile</p> -->
+
+                                    <span class="text-muted"><i class="uil uil-graduation-cap h4 mb-0 me-2 text-primary"></i>Profile </span>
+                                    
+                                    <!-- <ul class="list-unstyled mt-3">
+                                        <li class="list-inline-item m-1"><a href="jvascript:void(0)" class="rounded bg-light py-1 px-2 text-muted small">PHP</a></li>
+                                        <li class="list-inline-item m-1"><a href="jvascript:void(0)" class="rounded bg-light py-1 px-2 text-muted small">WordPress</a></li>
+                                        <li class="list-inline-item m-1"><a href="jvascript:void(0)" class="rounded bg-light py-1 px-2 text-muted small">Web Design</a></li>
+                                        <li class="list-inline-item m-1"><a href="jvascript:void(0)" class="rounded bg-light py-1 px-2 text-muted small">CSS</a></li>
+                                        <li class="list-inline-item m-1"><a href="jvascript:void(0)" class="rounded bg-light py-1 px-2 text-muted small">JS</a></li>
+                                    </ul> -->
+                                    <div class="d-grid">
+                                        <a href="page-job-candidate.html" class="btn btn-primary" style="color: #FFFFFF;">Voir le profile <i class="uil uil-angle-right-b align-middle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    
+                    <!-- PAGINATION END -->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->

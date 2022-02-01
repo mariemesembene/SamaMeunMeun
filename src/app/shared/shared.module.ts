@@ -12,12 +12,13 @@ import { PublierComponent } from './publier/publier.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListUsersLikeComponent } from './list-users-like/list-users-like.component';
 
 
 
 
 @NgModule({
-  declarations: [ListPublicationsComponent, ProfilComponent, HelpComponent, EquipeComponent, LoginComponent, SignupComponent, PublierComponent],
+  declarations: [ListPublicationsComponent, ProfilComponent, HelpComponent, EquipeComponent, LoginComponent, SignupComponent, PublierComponent, ListUsersLikeComponent],
   imports: [
     CommonModule,
     RouterModule,

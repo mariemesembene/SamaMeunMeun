@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { Comment } from '../models/Comment';
 import { Statistic } from '../models/Statistic';
 import { Video } from '../models/Video';
+
 
 
 @Injectable({
@@ -23,12 +24,22 @@ export class YoutubeService {
 
 
   getVideosFromChannel(maxResults: number): Observable<any>{
-    let url = 'https://www.googleapis.com/youtube/v3/search?key=' + environment.apiKey + 
-    '&channelId=' + environment.channelId + '&order=date&part=snippet&type=video,id&maxResults=' + maxResults
+    // https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=[YOUR_API_KEY] HTTP/1.1
+
+    let url = environment.youtubeMockUrl;
+
+    // let url = 'https://www.googleapis.com/youtube/v3/search?key=' + environment.apiKey + 
+    // '&channelId=' + environment.channelId + '&order=date&part=snippet&type=video,id&maxResults=' + maxResults
     return this.http.get(url)
     .pipe(map((res) => {
+      console.log("mock videos");
+      console.log(res);
       return res;
     }))
+  }
+
+  testMockUrl():Observable<any>{
+    return this.http.get<any>(environment.youtubeMockUrl);
   }
   
 
@@ -102,46 +113,31 @@ export class YoutubeService {
 
 
 
-
-    // fonction permettant d'annuler un like
-    cancelLikeComment(commentaire: Comment){
-       // on incrémente le nombre de like du commentaire
-       const body = {
-        "snippet": {
-          "channelId": environment.channelId,
-          "likeCount": commentaire.snippet.likeCount+1
-      },
-      "id": commentaire.id
-      }
-
-      return this.http.put("https://youtube.googleapis.com/youtube/v3/comments?part=snippet&key="+environment.apiKey, body);
-
-      // s'il y'a succès : dans notre base de données on doit supprimer la ligne avec l'email de l'utilisateur, son nom, l'url de sa photo et l'id du commentaire
-
-    }
-
-    // fonction permettant d'aimer un commentaire
-    likeComment(commentaire: Comment){
-      // on incrémente le nombre de like du commentaire
-      const body = {
-        "snippet": {
-          "channelId": environment.channelId,
-          "likeCount": commentaire.snippet.likeCount+1
-      },
-      "id": commentaire.id
-      }
-
-      return this.http.put("https://youtube.googleapis.com/youtube/v3/comments?part=snippet&key="+environment.apiKey, body);
-
-      // s'il y'a succès : dans notre base de données on doit inserer une ligne avec l'email de l'utilisateur, son nom, l'url de sa photo et l'id du commentaire
-    }
-
   
 
     // fonction permettant d'aimer une video
-    likeVideo(video: Video){
-      return this.http.post("https://youtube.googleapis.com/youtube/v3/videos/rate?id="+video.id.videoId+
-      "&rating=like&key="+environment.apiKey, null);
+    likeVideo(videoId, rate, userEmail){
+      const body = {
+        'videoId': videoId, 'rate':rate, 'userEmail':userEmail
+      }
+      return this.http.post(environment.apiUrl+"/youtube/likeVideo", body);
+      // return this.http.post("https://youtube.googleapis.com/youtube/v3/videos/rate?id="+video.id.videoId+
+      // "&rating=like&key="+environment.apiKey, null)
+      // .pipe(
+      //   map(
+      //     (response: HttpResponse<JSON>) => {
+      //       // si tout ce passe bien on envoie les données vers le back
+      //       // console.log("like vide");
+      //       // console.log(sucess);
+      //       // on teste si la requete a bien passé => code 204
+      //       if(response.status==204){
+
+      //       }
+            
+      //       return response;
+      //     }
+      //   )
+      // );
     }
   
 
@@ -167,5 +163,17 @@ export class YoutubeService {
       return this.http.get("https://youtube.googleapis.com/youtube/v3/videos/getRating?id="+videoId+
       "&key="+environment.apiKey);
     }
+
+    getProtectedMessage(){
+      const body = {
+        "displayText": "Hi",
+        "video": {
+          "videoId": "fAHoPlxTqQk"
+        }
+      }
+      return this.http.post(environment.apiUrl+"/comments", body);
+
+    }
+
 
   }

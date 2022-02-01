@@ -36,14 +36,6 @@ export interface Video{
             "liveBroadcastContent": string,
             "publishTime": string,
         }
-        "commentaires"?: {
-            "kind": string,
-            "etag": string,
-            "pageInfo": {
-                "totalResults": number,
-                "resultsPerPage": number
-            },
-            "items": Comment[]
-        }
+        "commentaires"?: any,
         "statistics"?:Statistic
 }

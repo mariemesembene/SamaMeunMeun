@@ -10,6 +10,10 @@ export const environment = {
 
   // id de notre chaine youtube
   channelId: "UCdQuSklyXrfjOdqJ0wHqBng",
+
+  apiUrl: "https://127.0.0.1:8000/api",
+
+  youtubeMockUrl: "http://localhost:3000/videos"
 };
 
 /*
